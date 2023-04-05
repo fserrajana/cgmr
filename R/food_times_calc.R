@@ -66,8 +66,6 @@ food_times_df_fast <-
     notes_df <- cgm_data[["notes_records"]]
     glucose_df <- cgm_data[["glucose_records"]]
     
-    printf("hello %d\n", 56)
-
     if (is.null(user_id)){  # find all foodnames regardless of user_id
       notes_df <-
         notes_df  %>%
