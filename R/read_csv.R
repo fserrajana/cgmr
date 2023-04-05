@@ -122,8 +122,8 @@ notes_df_from_csv <- function(file=system.file("extdata", package="cgmr", "First
 
 
   notes <-   read_csv(file, show_col_types = FALSE) %>%
-  transmute(Start = mdy_hm(.data[["Start"]]),
-            End = mdy_hm(.data[["End"]]),
+  transmute(Start = dmy_hm(.data[["Start"]]),
+            End = dmy_hm(.data[["End"]]),
             Activity = factor(.data[["Activity"]], levels = ACTIVITY_TYPES),
             Comment =  .data[["Comment"]],
             Z = .data[["Z"]],
